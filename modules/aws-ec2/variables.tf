@@ -1,30 +1,30 @@
 variable "ec2-tags" {
 
-    type = map(string)
-    description = "filtering info about the instance"
+  type        = map(string)
+  description = "filtering info about the instance"
 
-    default = {
-        
-        "name" = "tochi-"
+  default = {
 
-    }
-    
+    "name" = "tochi-"
+
+  }
+
 }
 
 variable "instance" {
 
-    type = string
-    description = "virtual server"
+  type        = string
+  description = "virtual server"
 
-    default = "t2.micro"
+  default = "t2.micro"
 
 }
 
 variable "aws_ami" {
 
-    type = string
-    description = "ami name"
+  type        = string
+  description = "ami name"
 
-    default = "ami-03af6a70ccd8cb578"
+  default = "ami-03af6a70ccd8cb578"
 
 }
