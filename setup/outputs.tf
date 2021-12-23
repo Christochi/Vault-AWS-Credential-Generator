@@ -11,3 +11,9 @@ output "secret-backend" {
   value = module.vault-aws.secret-backend-data
 
 }
+
+output "subnet-data" {
+
+  value = module.ec2.subnet-data
+
+}
