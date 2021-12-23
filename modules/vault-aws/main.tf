@@ -6,8 +6,8 @@ resource "vault_aws_secret_backend" "aws" {
     */
     path = var.mount-path # where aws secret engine will be mounted
     description = "mounts the aws secret engine"
-    # max_lease_ttl_seconds = 120 # lease duration
-    default_lease_ttl_seconds = 60 # lease duration
+    max_lease_ttl_seconds = 600 # the max cap TTL for credentials
+    default_lease_ttl_seconds = 300 # lease duration always < max_lease_ttl_seconds
 
 }
 
@@ -27,10 +27,20 @@ resource "vault_aws_secret_backend_role" "role" {
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": "ec2:*",
+      "Action": [
+        "iam:*", "ec2:*"
+      ],
       "Resource": "*"
     }
   ]
 }
 EOT
+}
+
+# generally, these blocks would be in a different module
+data "vault_aws_access_credentials" "creds" {
+
+  backend = vault_aws_secret_backend.aws.path
+  role    = vault_aws_secret_backend_role.role.name
+  
 }
