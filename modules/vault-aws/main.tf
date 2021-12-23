@@ -1,3 +1,4 @@
+# create aws secret engine
 resource "vault_aws_secret_backend" "aws" {
 
     /*
@@ -11,6 +12,7 @@ resource "vault_aws_secret_backend" "aws" {
 
 }
 
+# create aws role
 resource "vault_aws_secret_backend_role" "role" {
 
   # The path the AWS secret backend is mounted at  
@@ -37,7 +39,8 @@ resource "vault_aws_secret_backend_role" "role" {
 EOT
 }
 
-# generally, these blocks would be in a different module
+# retrieves the backend and role which will be used in creating the access
+# and secret keys
 data "vault_aws_access_credentials" "creds" {
 
   backend = vault_aws_secret_backend.aws.path
