@@ -13,3 +13,6 @@
 *.ignore
 
 *.svg
+
+# go files
+go.*
