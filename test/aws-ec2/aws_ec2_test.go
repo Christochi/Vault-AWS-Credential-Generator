@@ -1,6 +1,6 @@
 /*
 	Test Case:
-	- Asserts the correctness of the tag
+	- Asserts the correctness of the subnet tag
 	- check if subnet is a public subnet
 
 	Test Type: Unit Test
