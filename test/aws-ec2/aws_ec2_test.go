@@ -1,8 +1,5 @@
 /*
-	Test Case:
-	- Asserts the correctness of the subnet tag
-	- check if the subnet is a public subnet
-
+	Test Case: check if the subnet is a public subnet
 	Test Type: Unit Test
 */
 
