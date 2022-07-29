@@ -21,6 +21,6 @@ resource "aws_instance" "server" {
 
   tags = {
 
-    Name = "${var.ec2-tags.name}secret-engine"
+    Name = "${var.ec2-tags.name}instance"
   }
 }
