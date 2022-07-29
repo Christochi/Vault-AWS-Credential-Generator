@@ -6,7 +6,6 @@
 package test
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
@@ -31,8 +30,5 @@ func TestAWSEC2(t *testing.T) {
 
 	// Run `terraform output` to get the values of output variable
 	subnetID := terraform.Output(t, terraformOptions, "subnet-data")
-
-	// print output value
-	fmt.Printf("The subnet-id is %s\n", subnetID)
 
 }
