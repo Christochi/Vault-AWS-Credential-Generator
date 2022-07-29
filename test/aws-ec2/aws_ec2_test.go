@@ -10,6 +10,7 @@ import (
 
 	"github.com/gruntwork-io/terratest/modules/aws"
 	"github.com/gruntwork-io/terratest/modules/terraform"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestAWSEC2(t *testing.T) {
@@ -20,7 +21,7 @@ func TestAWSEC2(t *testing.T) {
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 
 		// Set the path to the Terraform code that will be tested.
-		TerraformDir: "../modules/aws-ec2",
+		TerraformDir: "../../modules/aws-ec2",
 	})
 
 	// Clean up resources with "terraform destroy" at the end of the test.
@@ -32,4 +33,15 @@ func TestAWSEC2(t *testing.T) {
 	// Run `terraform output` to get the values of output variable
 	subnetID := terraform.Output(t, terraformOptions, "subnet-data")
 
+	/*
+		function checks if subnet is public in the provided region
+
+		last args ("") in the function, represents the region. 
+		Since the the region is already configured in cat ~/.aws/config,
+		there is no point putting the region unless you want to override it
+	*/
+	isPublic := aws.IsPublicSubnet(t, subnetID, "")
+
+	assert.True(t, true, isPublic)
+	
 }
