@@ -30,4 +30,9 @@ func TestVaultAWS(t *testing.T) {
 	// Run "terraform init" and "terraform apply". Fail the test if there are any errors.
 	terraform.InitAndApply(t, terraformOptions)
 
+	// Run `terraform output` to get the values of output variable
+	iamRole := terraform.Output(t, terraformOptions, "secret-backend-data.role")
+
+	fmt.Printf("Aws role %s\n", iamRole)
+
 }
