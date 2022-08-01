@@ -37,7 +37,8 @@ func TestAWSEC2(t *testing.T) {
 		function checks if subnet is public in the provided region
 
 		last args ("") in the function, represents the region.
-		Since the the region is already configured in cat ~/.aws/config or as env var,
+		Since the the region is already configured in AWS shared configuration file
+		(~/.aws/config) or as an env var,
 		there is no point putting the region unless you want to override it
 	*/
 	isPublic := aws.IsPublicSubnet(t, subnetID, "")
