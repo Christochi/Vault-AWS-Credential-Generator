@@ -23,4 +23,11 @@ func TestVaultAWS(t *testing.T) {
 		// Set the path to the Terraform code that will be tested.
 		TerraformDir: "../../modules/vault-aws",
 	})
+
+	// Clean up resources with "terraform destroy" at the end of the test.
+	defer terraform.Destroy(t, terraformOptions)
+
+	// Run "terraform init" and "terraform apply". Fail the test if there are any errors.
+	terraform.InitAndApply(t, terraformOptions)
+
 }
