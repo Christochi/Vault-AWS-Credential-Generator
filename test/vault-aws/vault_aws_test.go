@@ -1,5 +1,7 @@
 /*
-	Test Case: check if the subnet is a public subnet
+	Test Case:
+		- check if the vault aws secret backend exists
+		- login using the generated credentials
 	Test Type: Unit Test
 */
 
@@ -9,7 +11,6 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gruntwork-io/terratest/modules/aws"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
@@ -31,7 +32,7 @@ func TestVaultAWS(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	// Run `terraform output` to get the values of the IAM Role
-	iamRole := terraform.Output(t, terraformOptions, "secret-backend-data.role")
+	iamRole := terraform.OutputMap(t, terraformOptions, "secret-backend-data")
 
 	fmt.Printf("Aws role %s\n", iamRole)
 
