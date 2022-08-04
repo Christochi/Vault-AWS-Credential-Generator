@@ -12,9 +12,13 @@ import (
 	"testing"
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
+	"github.com/hashicorp/vault/api"
 )
 
-func TestVaultAWS(t *testing.T) {
+type vars struct {
+}
+
+func (v *vars) TestVaultAWS(t *testing.T) {
 
 	// Construct the terraform options with default retryable errors to handle the most common
 	// retryable errors in terraform testing.
@@ -36,9 +40,16 @@ func TestVaultAWS(t *testing.T) {
 
 	// fmt.Printf("Aws role %s\n", iamRole)
 
+	data := v.TestVaultAWSSecretBackendExist(t)
+
+	fmt.Printf("Aws role %s\n", data)
+
 }
 
-//
-func TestVaultAWSSecretBackendExist(t *testing.T) {
+// check if the aws secret engine was created by checking the mount path
+func (v *vars) TestVaultAWSSecretBackendExist(t *testing.T) map[string]data {
 
+	data, err := v.Sys().ListMounts()
+
+	return data
 }
