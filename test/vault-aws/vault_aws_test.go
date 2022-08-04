@@ -32,8 +32,13 @@ func TestVaultAWS(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	// Run `terraform output` to get the values of the IAM Role
-	iamRole := terraform.OutputMap(t, terraformOptions, "secret-backend-data")
+	// iamRole := terraform.OutputMap(t, terraformOptions, "secret-backend-data")
 
-	fmt.Printf("Aws role %s\n", iamRole)
+	// fmt.Printf("Aws role %s\n", iamRole)
+
+}
+
+//
+func TestVaultAWSSecretBackendExist(t *testing.T) {
 
 }
