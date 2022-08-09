@@ -16,7 +16,7 @@ This is where terraform is called to spin-up infrastructure
 - aws account and credentials are needed for terraform to provision the infrastructure
 - tweak subnet code in **modules/aws-ec2/main.tf**
 - set up the dev server: `vault server -dev`
-- include in the CLI:
+- export these vars in the CLI taken from the output response of `vault server -dev` cmd:
    - `export VAULT_ADDR` as environment variable
    - `export VAULT_TOKEN` as environment variable
 - cd to `setup/`:
