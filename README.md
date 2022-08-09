@@ -22,14 +22,10 @@ This is where terraform is called to spin-up infrastructure
 
    #### Usage Example
    ~~~
-   client-id             = "c5bgyg0-575-....."
-   client-secret         = "AdCD419~F...."
-   subscription-id       = "c4774376-......"
-   tenant-id             = "b9rc7889-....."
-   az_image_name         = "your-custom-image-name"
-   managed-image-rg-name = "your-resource-group" # not parker created
+   export VAULT_ADDR='http://127.0.0.1:8200'
+   export VAULT_TOKEN='<Root Token>'
    ~~~
-   
+
 - cd to `setup/`:
    - run `terraform init` cmd
    - run `terraform plan` cmd
