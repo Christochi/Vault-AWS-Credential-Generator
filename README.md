@@ -7,7 +7,7 @@ The repository comprises 3 directories: **modules, setup and test**
 
 ### modules
 - **aws-ec2 module** contains code for provisioning an EC2 instance in a subnet that already exists in AWS. You will have to tweak the code for the subnet
-- **vault-aws module** sets up aws secrets engine and iam credentials
+- **vault-aws module** sets up aws secrets engine and IAM credentials
 
 ### setup
 root module resides here, including other configuration files
