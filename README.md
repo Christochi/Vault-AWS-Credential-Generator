@@ -3,7 +3,7 @@
 ## Description
 Vault generates AWS credentials (with a time-to-live) from Vault's AWS Secrets Engine and Terraform uses the credentials to authenticate and  provision an EC2 instance in AWS. 
 
-The Terraform configuration comprises 2 sub-directories: modules and setup
+The repository comprises 3 directories: **modules, setup and test**
 
 ### modules
 - **aws-ec2 module** contains code for provisioning an EC2 instance in subnet. You will have to tweak the code for the subnet
