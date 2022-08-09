@@ -10,7 +10,7 @@ The repository comprises 3 directories: **modules, setup and test**
 - **vault-aws module** sets up aws secrets engine and IAM credentials
 
 ### setup
-root module resides here, including other configuration files
+This is where terraform is called to spin-up infrastructure
 
 ## Setup
 - tweak subnet code
