@@ -1,4 +1,5 @@
-# Terraform-Vault-AWS
+# Vault-AWS-Credential-Generator
+
 ## Description
 Vault generates AWS credentials (with a time-to-live) from Vault's AWS Secrets Engine and uses those credentials to authenticate and  provision an EC2 instance in AWS using Terraform
 
