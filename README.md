@@ -19,6 +19,17 @@ This is where terraform is called to spin-up infrastructure
 - export these vars in the CLI taken from the output response of `vault server -dev` cmd:
    - `export VAULT_ADDR` as environment variable
    - `export VAULT_TOKEN` as environment variable
+
+   #### Usage Example
+   ~~~
+   client-id             = "c5bgyg0-575-....."
+   client-secret         = "AdCD419~F...."
+   subscription-id       = "c4774376-......"
+   tenant-id             = "b9rc7889-....."
+   az_image_name         = "your-custom-image-name"
+   managed-image-rg-name = "your-resource-group" # not parker created
+   ~~~
+   
 - cd to `setup/`:
    - run `terraform init` cmd
    - run `terraform plan` cmd
