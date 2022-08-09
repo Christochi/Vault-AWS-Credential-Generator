@@ -16,9 +16,9 @@ This is where terraform is called to spin-up infrastructure
 - tweak subnet code
 - set up the dev server: `vault server -dev`
 - include in the CLI:
-   - `export VAULT_ADDR` environment variable
-   - `export VAULT_TOKEN` environment variable
-- go to `setup/`:
+   - `export VAULT_ADDR` as environment variable
+   - `export VAULT_TOKEN` as environment variable
+- cd to `setup/`:
    - run `terraform init` cmd
    - run `terraform plan` cmd
    - run `terraform apply` cmd
