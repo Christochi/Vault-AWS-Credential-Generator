@@ -7,14 +7,14 @@ The repository comprises 3 directories: **modules, setup and test**
 
 ### modules directory
 - **aws-ec2 module** contains code for provisioning an EC2 instance in a subnet that already exists in AWS. You will have to tweak the code for the subnet
-- **vault-aws module** sets up aws secrets engine and IAM credentials
+- **vault-aws module** sets up aws secrets engine and IAM credentials using your aws account and credentials. Terraform automatically fetches them
 
 ### setup directory
 This is where terraform is called to spin-up infrastructure
 
 ## Setup
 - aws account and credentials are needed for terraform to provision the infrastructure
-- tweak subnet code in **modules/aws-ec2/main.tf**. 
+- tweak subnet code in **modules/aws-ec2/main.tf**
 - set up the dev server: `vault server -dev`
 - include in the CLI:
    - `export VAULT_ADDR` as environment variable
