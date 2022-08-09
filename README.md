@@ -13,7 +13,7 @@ The repository comprises 3 directories: **modules, setup and test**
 This is where terraform is called to spin-up infrastructure
 
 ## Setup
-- tweak subnet code
+- tweak subnet code in **modules/aws-ec2/main.tf**
 - set up the dev server: `vault server -dev`
 - include in the CLI:
    - `export VAULT_ADDR` as environment variable
