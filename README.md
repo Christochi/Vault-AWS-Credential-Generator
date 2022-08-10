@@ -23,8 +23,8 @@ This is where terraform is called to spin-up infrastructure
    ~~~
    module "ec2" {
 
-   source = "../modules/aws-ec2"  
-   subnet-tag = "tochi-subnet"
+     source = "../modules/aws-ec2"  
+     subnet-tag = "tochi-subnet"
 
    }
    ~~~
