@@ -13,7 +13,7 @@ data "aws_subnet" "west-subnet" {
 # create EC2 instance
 resource "aws_instance" "server" {
 
-  ami           = var.aws_ami # ami in us-west-1
+  ami           = var.aws-ami # ami in us-west-1
   instance_type = var.instance
 
   # subnet_id = var.subnet # VPC subnet ID to launch EC2 instance
