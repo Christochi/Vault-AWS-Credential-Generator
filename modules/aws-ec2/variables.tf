@@ -20,7 +20,7 @@ variable "instance" {
 
 }
 
-variable "aws_ami" {
+variable "aws-ami" {
 
   type        = string
   description = "ami name"
