@@ -28,3 +28,12 @@ variable "aws-ami" {
   default = "ami-03af6a70ccd8cb578"
 
 }
+
+variable "subnet-tag" {
+
+  type        = string
+  description = "tag identifier for the subnet"
+
+  default = "tochi-subnet"
+
+}
