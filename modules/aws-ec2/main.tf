@@ -4,7 +4,7 @@ data "aws_subnet" "west-subnet" {
   filter {
 
     name   = "tag:Name"
-    values = ["tochi-subnet"]
+    values = [var.subnet-tag]
 
   }
 
