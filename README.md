@@ -17,7 +17,7 @@ This is where terraform is called to spin-up infrastructure
 
 ## Setup
 - aws account and credentials are needed for terraform to provision the infrastructure
-- tweak subnet code in **modules/aws-ec2/main.tf**
+- tweak subnet code in **setup/main.tf**
 
   #### Usage Example
    ~~~
