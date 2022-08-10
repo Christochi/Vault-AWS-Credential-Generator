@@ -17,7 +17,7 @@ This is where terraform is called to spin-up infrastructure
 
 ## Setup
 - aws account and credentials are needed for terraform to provision the infrastructure
-- tweak subnet code in **setup/main.tf**. if you have an existing subnet in aws, initialize the variable **subnet-tag** with the tag value of your subnet
+- if you have an existing subnet in aws, initialize the variable **subnet-tag** with the tag value of your subnet in **setup/main.tf**
 
   #### Usage Example
    ~~~
