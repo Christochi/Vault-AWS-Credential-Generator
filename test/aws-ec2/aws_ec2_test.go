@@ -22,6 +22,12 @@ func TestAWSEC2(t *testing.T) {
 
 		// Set the path to the Terraform code that will be tested.
 		TerraformDir: "../../modules/aws-ec2",
+
+		// variables are passed to terraform using -var option
+		Vars: map[string]interface{}{
+
+			"subnet-tag": "tochi-subnet",
+		},
 	})
 
 	// Clean up resources with "terraform destroy" at the end of the test.
