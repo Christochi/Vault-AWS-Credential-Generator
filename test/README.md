@@ -1,3 +1,18 @@
+## pass variables to terraform using -var option in func TestAWSEC2(t *testing.T) block
+~~~
+terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
+
+		// Set the path to the Terraform code that will be tested.
+		TerraformDir: "../../modules/aws-ec2",
+
+		// variables are passed to terraform using -var option
+		Vars: map[string]interface{}{
+
+			"subnet-tag": "tochi-subnet",
+		},
+})
+~~~
+
 ## configure dependencies
 
 #### Example
