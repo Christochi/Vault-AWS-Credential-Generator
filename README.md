@@ -21,8 +21,12 @@ This is where terraform is called to spin-up infrastructure
 
   #### Usage Example
    ~~~
-   export VAULT_ADDR='http://127.0.0.1:8200'
-   export VAULT_TOKEN='<Root Token>'
+   module "ec2" {
+
+   source = "../modules/aws-ec2"  
+   subnet-tag = "tochi-subnet"
+
+   }
    ~~~
    
 - set up the dev server. run this command on the cli: `vault server -dev`
