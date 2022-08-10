@@ -5,7 +5,7 @@
 - `go mod init test`
 - `go mod tidy`
 
-## run test:
+## run test
 
 #### Example
 `go test`
