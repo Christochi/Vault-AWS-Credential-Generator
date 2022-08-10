@@ -9,3 +9,5 @@
 
 #### Example
 `go test`
+
+***unit test for vault-aws is in progress***
