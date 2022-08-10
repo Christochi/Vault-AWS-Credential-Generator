@@ -13,7 +13,8 @@ The repository comprises 3 directories: **modules, setup and test**
 This is where terraform is called to spin-up infrastructure
 
 ### test directory
-***in progress***
+leverages terratest to execute unit tests on infrastructure code and vault code
+check [readme](./test/README.md)
 
 ## Requirement
 - AWS Account and Credentials
