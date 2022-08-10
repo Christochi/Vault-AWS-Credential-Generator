@@ -1,4 +1,4 @@
-## pass variables to terraform using -var option in func TestAWSEC2(t *testing.T) block
+## pass variables to terraform using -var option in Vars: map[string]interface{}{} block
 ~~~
 terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 
