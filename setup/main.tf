@@ -1,7 +1,8 @@
 # compile aws-ec2
 module "ec2" {
 
-  source = "../modules/aws-ec2"
+  source = "../modules/aws-ec2"  
+  subnet-tag = "tochi-subnet"
 
 }
 
