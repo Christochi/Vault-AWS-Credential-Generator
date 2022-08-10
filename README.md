@@ -24,6 +24,7 @@ This is where terraform is called to spin-up infrastructure
    
 - set up the dev server. run this command on the cli: `vault server -dev`
 - export the **vault address** and **root token** in another terminal taken from the output response of `vault server -dev` cmd:
+
    - `export VAULT_ADDR` as environment variable
    - `export VAULT_TOKEN` as environment variable
 
