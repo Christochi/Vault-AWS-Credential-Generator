@@ -6,7 +6,7 @@ Vault generates AWS credentials (with a time-to-live) from Vault's AWS Secrets E
 The repository comprises 3 directories: **modules, setup and test**
 
 ### modules directory
-- **aws-ec2 module** contains code for provisioning an EC2 instance in a subnet that already exists in AWS. You will have to tweak the code for the subnet
+- **aws-ec2 module** contains code for provisioning an EC2 instance in a subnet that already exists in AWS
 - **vault-aws module** sets up aws secrets engine and IAM credentials using your aws account and credentials. Terraform automatically fetches them
 
 ### setup directory
