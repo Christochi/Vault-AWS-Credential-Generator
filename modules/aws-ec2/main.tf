@@ -1,4 +1,4 @@
-# fetch subnet id
+# fetch subnet in the region that has that tag name
 data "aws_subnet" "west-subnet" {
 
   filter {
