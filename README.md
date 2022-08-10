@@ -24,9 +24,10 @@ This is where terraform is called to spin-up infrastructure
 - **aws-access-key**
 - **aws-secret-key**
 - **lease-start-time**
-- **aws-access-key**
-- **backend**: mount path of the vault aws secret backend
-- **role**: newly created IAM role
+- **lease-ttl**
+- **backend**
+- **role**:
+- **subnet-id**
 
 ## Setup
 - aws account and credentials are needed for terraform to provision the infrastructure
