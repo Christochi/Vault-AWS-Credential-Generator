@@ -34,6 +34,6 @@ variable "subnet-tag" {
   type        = string
   description = "tag identifier for the subnet"
 
-  default = "tochi-subnet"
+  default = ""
 
 }
