@@ -1,3 +1,4 @@
+# output aws secret backend and iam role
 output "secret-backend-data" {
 
   value = {
@@ -9,6 +10,7 @@ output "secret-backend-data" {
 
 }
 
+# output access key, secret key, lease ttl, lease start time
 output "aws-backend-data" {
 
   value = {
