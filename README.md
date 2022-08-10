@@ -21,13 +21,13 @@ This is where terraform is called to spin-up infrastructure
 - Terraform
 
 ## Outputs
-- **aws-access-key**
-- **aws-secret-key**
-- **lease-start-time**
-- **lease-ttl**
-- **backend**
-- **role**:
-- **subnet-id**
+- aws-access-key
+- aws-secret-key
+- lease-start-time
+- lease-ttl
+- backend
+- role
+- subnet-id
 
 ## Setup
 - aws account and credentials are needed for terraform to provision the infrastructure
