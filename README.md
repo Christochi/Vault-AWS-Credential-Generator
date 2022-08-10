@@ -12,6 +12,9 @@ The repository comprises 3 directories: **modules, setup and test**
 ### setup directory
 This is where terraform is called to spin-up infrastructure
 
+### test directory
+***in progress***
+
 ## Setup
 - aws account and credentials are needed for terraform to provision the infrastructure
 - tweak subnet code in **modules/aws-ec2/main.tf**
