@@ -5,11 +5,6 @@ Vault generates AWS credentials (with a time-to-live) from Vault's AWS Secrets E
 
 The repository comprises 3 directories: **modules, setup and test**
 
-## Requirement
-- AWS Account and Credentials
-- Vault: Knowledge of AWS Secret Engine
-- Terraform
-
 ### modules directory
 - **aws-ec2 module** contains code for provisioning an EC2 instance in a subnet that already exists in AWS
 - **vault-aws module** sets up aws secrets engine and IAM credentials using your aws account and credentials. Terraform automatically fetches them
@@ -19,6 +14,11 @@ This is where terraform is called to spin-up infrastructure
 
 ### test directory
 ***in progress***
+
+## Requirement
+- AWS Account and Credentials
+- Vault: Knowledge of AWS Secret Engine
+- Terraform
 
 ## Outputs
 - **aws-access-key**
