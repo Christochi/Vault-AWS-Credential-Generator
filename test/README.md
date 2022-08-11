@@ -25,4 +25,4 @@ terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 #### Example
 `go test`
 
-***unit test for vault-aws is in progress***
+***unit test for vault-aws module is in progress***
