@@ -1,6 +1,6 @@
 ## pass variables to terraform using -var option in Vars: map[string]interface{}{} block
 
-### Usage Example
+#### Usage Example
 ~~~
 terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 
