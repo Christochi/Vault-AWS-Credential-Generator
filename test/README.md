@@ -1,4 +1,6 @@
 ## pass variables to terraform using -var option in Vars: map[string]interface{}{} block
+
+### Usage Example
 ~~~
 terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 
@@ -8,7 +10,7 @@ terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		// variables are passed to terraform using -var option
 		Vars: map[string]interface{}{
 
-			"subnet-tag": "tochi-subnet",
+			"subnet-tag": "western-subnet",
 		},
 })
 ~~~
